@@ -4,9 +4,9 @@ using UnityEngine.Networking;
 
 namespace HTTP
 {
-    public class API_5_PostForm : ApiBase
+    public class APIPostForm : ApiBase
     {
-        private static string Uri => $"{Common.Domain}";
+        private static string Uri => $"{Common.Domain}/image";
 
         public static UnityWebRequest CreateWebRequestWithWWWForm(string keyword1, string keyword2, string keyword3, string category)
         {

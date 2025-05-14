@@ -9,7 +9,6 @@ namespace HTTP
         {
             // GET 요청 생성
             using var webRequest = API_0_UndefinedApi.CreateWebRequest();
-            requestTextUI.text = webRequest.uri.ToString();
             // 요청을 비동기적으로 전송
             yield return webRequest.SendWebRequest();
 
@@ -19,7 +18,6 @@ namespace HTTP
             }
             // JSON 응답 파싱 및 UI 출력
             var result = ApiBase.GetResultFromJson<API_0_UndefinedApi.Result>(webRequest);
-            responseTextUI.text = result.ToString();
         }
     }
 }

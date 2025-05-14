@@ -6,8 +6,7 @@ namespace HTTP
     {
         protected override IEnumerator RequestProcess()
         {
-            using var webRequest = API_5_PostForm.CreateWebRequestWithMultipartForm("호두", 7);
-            requestTextUI.text = webRequest.uri.ToString();
+            using var webRequest = APIPostForm.CreateWebRequestWithMultipartForm("호두", 7);
             yield return webRequest.SendWebRequest();
 
             if (ApiBase.ErrorHandling(webRequest))
@@ -15,8 +14,7 @@ namespace HTTP
                 yield break;
             }
             
-            var result = ApiBase.GetResultFromJson<API_5_PostForm.Result>(webRequest);
-            responseTextUI.text = result.ToString();
+            var result = ApiBase.GetResultFromJson<APIPostForm.Result>(webRequest);
         }
     }
 }

@@ -14,10 +14,8 @@ namespace HTTP
                 yield break;
             }
             
-            requestTextUI.text = webRequest.uri.ToString();
 
             var result = ApiBase.GetResultFromJson<API_2_GetJson.Result>(webRequest);
-            responseTextUI.text = result.ToString();
         }
     }
 }

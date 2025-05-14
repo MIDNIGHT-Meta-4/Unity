@@ -6,8 +6,13 @@ public enum SceneDataType
     Start,
     Loading,
     Catagory,
+    Warning,
     Game,
     GameResult,
+    PostError,
+    Duplicate,
+    NoPrefab,
+    
 }
 namespace Single
 {
